@@ -1,4 +1,4 @@
-import React from 'react'
+
 import imgEmpleado from '../../assets/img/empleado.png'
 import imgPedido from '../../assets/img/lista-de-la-compra.png'
 import imgDescargarPed from '../../assets/img/descargar.png'

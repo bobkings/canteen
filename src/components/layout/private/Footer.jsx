@@ -7,7 +7,7 @@ export const Footer = () => {
   },[])
 
   return (
-    <footer className="bg-dark footer-align">
+    <footer className="bg-dark footer-align footer">
       <div className="text-center text-light p-3">
         © <span id="year"></span> Copyright: <a href="#" className="text-light">Nombre pendiente</a>
       </div>
