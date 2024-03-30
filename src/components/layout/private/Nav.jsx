@@ -1,6 +1,9 @@
 import React from 'react'
+import useAuth from '../../../hooks/useAuth';
 
 export const Nav = () => {
+  const { auth } = useAuth();
+  console.log(auth);
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -26,7 +29,7 @@ export const Nav = () => {
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Roberto Reyes
+                {auth.fullName}
               </a>
               <ul className="dropdown-menu dropdown-menu-end">
                 <li><a className="dropdown-item" href="#">Cerrar sesión</a></li>

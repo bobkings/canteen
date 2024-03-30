@@ -10,13 +10,13 @@ import { Orders } from '../components/content/Orders';
 import { Users } from '../components/content/Users';
 import { SeeQr } from '../components/content/SeeQr';
 
-//import { AuthProvider } from '../context/AuthProvider';
+import { AuthProvider } from '../context/AuthProvider';
 
 
 export const Routing = () => {
     return (
         <BrowserRouter>
-            
+            <AuthProvider>
                 <Routes>
 
                     <Route path='/' element={<Login />}/>
@@ -42,7 +42,7 @@ export const Routing = () => {
                     } />
 
                 </Routes>
-            
+            </AuthProvider>
         </BrowserRouter>
     )
 }
