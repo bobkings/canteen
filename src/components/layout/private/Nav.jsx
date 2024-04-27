@@ -1,5 +1,6 @@
 import React from 'react'
 import useAuth from '../../../hooks/useAuth';
+import { Link, NavLink } from 'react-router-dom';
 
 export const Nav = () => {
   const { auth } = useAuth();
@@ -14,16 +15,22 @@ export const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link text-light" href="#">Empleados</a>
+              <NavLink to="/user/employees/" className="nav-link text-light">
+                Empleados
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light" href="#">Pedidos</a>
+              <NavLink to="/user/orders/" className="nav-link text-light">
+                Pedidos
+              </NavLink>
             </li>
             <li className="nav-item">
               <a className="nav-link text-light" href="#">Descargar pedidos</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-light" href="#">Usuarios</a>
+              <NavLink to="/user/users/" className="nav-link text-light">
+                Usuarios
+              </NavLink>              
             </li>
           </ul>
           <ul className="navbar-nav mb-2 mb-lg-0">
@@ -32,7 +39,11 @@ export const Nav = () => {
                 {auth.fullName}
               </a>
               <ul className="dropdown-menu dropdown-menu-end">
-                <li><a className="dropdown-item" href="#">Cerrar sesión</a></li>
+                <li>
+                  <NavLink to="/user/logout" className="dropdown-item">
+                    Cerrar sesión
+                  </NavLink>
+                </li>
               </ul>
             </li>
 

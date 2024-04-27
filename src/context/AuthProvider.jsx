@@ -6,6 +6,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({});
   const [loading, setLoading] = useState(true);
+  const [tokenSt, setToken] = useState();
 
   useEffect(() => {
     authUser();
@@ -14,6 +15,7 @@ export const AuthProvider = ({ children }) => {
   const authUser = async () => {
     //sacar datos del usuario identificado del localstorage
     const token = localStorage.getItem("token");
+    setToken(token);
     const user = localStorage.getItem("user");
 
     //comprobar si tengo token y el user
@@ -49,6 +51,7 @@ export const AuthProvider = ({ children }) => {
       {
         auth,
         setAuth,
+        tokenSt,
         loading
       }
     }

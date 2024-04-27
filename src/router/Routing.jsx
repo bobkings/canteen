@@ -11,6 +11,7 @@ import { Users } from '../components/content/Users';
 import { SeeQr } from '../components/content/SeeQr';
 
 import { AuthProvider } from '../context/AuthProvider';
+import { Logout } from '../components/content/Logout';
 
 
 export const Routing = () => {
@@ -25,6 +26,7 @@ export const Routing = () => {
                     <Route path="/user/" element={<PrivateLayout />}>
                         <Route index element={ <MainMenu/> } />
                         <Route path="employees" element={<Employees />} />
+                        <Route path="logout" element={<Logout/>} />
                         <Route path="new-order" element={<NewOrder />} />
                         <Route path="order-options" element={<OrderOptions />} />       
                         <Route path="orders" element={<Orders />} />
